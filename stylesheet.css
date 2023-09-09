@@ -1,0 +1,282 @@
+/* Reset some default styles */
+body, h1, p, ul, li, img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: black;
+    text-align: left; /* Align header text to the left */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+/* Style for navigation links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition on hover */
+    font-size: 24px; /* Increase font size */
+    padding: 20px 30px; /* Increase padding for larger clickable area */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #808080; /* Change color on hover (you can use your desired color) */
+}
+
+.section {
+    text-align: center;
+    padding: 20px 0; /* Reduce top and bottom padding */
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Adjust spacing for sections */
+#home {
+    margin-bottom: 20px; /* Move down */
+    padding-top: 200px; /* Add top padding for spacing */
+}
+#home h1 {
+    font-size: 64px; /* Adjust the font size as needed */
+}
+#home p {
+    font-size: 84px; /* Adjust the font size as needed */
+}
+
+#about {
+    margin-bottom: 20px; /* Move down */
+    padding-top: 10px; /* Add top padding for spacing */
+}
+
+#contact {
+    margin-top: 20px; /* Move down */
+    padding-top: 10px; /* Add top padding for spacing */
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 80px; /* Gap between grid items */
+    margin-top: 100px;
+}
+
+/* Style the third and fourth images */
+.images img:nth-child(3),
+.images img:nth-child(4) {
+    grid-column: span 1; /* Each image spans one column */
+    justify-self: center; /* Center align horizontally */
+    align-self: center; /* Center align vertically */
+    transition: transform 0.2s ease; /* Add image hover effect */
+}
+
+.images img:nth-child(3):hover,
+.images img:nth-child(4):hover {
+    transform: scale(1.05); /* Adjust the scale factor as desired on hover */
+}
+
+.image-container {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 20px; /* Add spacing between images and their descriptions */
+}
+.images img:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+.image-description h3 {
+    max-width: 100%; /* Full width for image descriptions */
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center; /* Center align h1 */
+    margin-bottom: 10px; /* Slightly reduce margin for h1 */
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px; /* Slightly reduce margin for h2 */
+}
+
+p {
+    font-size: 20px;
+    text-align: center; /* Center-align paragraphs */
+    margin-bottom: 10px; /* Slightly reduce margin for paragraphs */
+}
+
+.expertise {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.expertise h1 {
+    flex: 1;
+    text-align: center;
+    max-width: 40%;
+}
+
+.expertise-description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.expertise-description p {
+    flex: 1;
+    max-width: 30%;
+    text-align: center;
+}
+
+/* Add space above the "About Me" heading */
+#about h1:first-child {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Add space below the "About Me" heading */
+#about h1:first-child {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+/* Add space between "About Me" and the paragraphs */
+#about p:first-child {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+/* Reduce spacing between paragraphs within the "About" section */
+#about p {
+    margin-bottom: 20px; /* Reduce the margin between paragraphs */
+}
+
+/* Limit the height of the "About Me" paragraph container and hide overflow */
+.about-description p {
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5; /* Adjust line height for spacing */
+}
+
+/* Style the horizontal line */
+hr {
+    border: 1px solid #fff; /* Set the border color and style */
+    margin: 20px 0; /* Adjust margin for spacing */
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 20px;
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px; /* Add margin to space the button from other elements */
+    border: 2px solid white; /* White outline */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.contact-button:hover {
+    background-color: white; /* Black background on hover */
+    color: black; /* White text on hover */
+}
+
+/* Fix image size (remove zoom effect) */
+.images img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Your existing styles */
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Background color for loading screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.loading-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-bar {
+    width: 200px;
+    height: 20px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px; /* Add space between loading text and bar */
+}
+
+.loading-progress {
+    width: 0; /* Initialize the progress width to 0 */
+    height: 100%;
+    background-color: #808080;
+    animation: progress-animation 2s linear forwards; /* Start progress animation */
+}
+
+.loading-text img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    /* Add any other styles as needed */
+}
+@keyframes progress-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+/* CSS for screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Your responsive styles here */
+}
+
+/* CSS for screens between 601px and 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Your responsive styles here */
+}
+
