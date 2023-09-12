@@ -23,7 +23,7 @@ body {
 header {
     background-color: black;
     text-align: left; /* Align header text to the left */
-    padding-top: 7px;
+    padding-top: 10px;
 }
 
 nav ul {
