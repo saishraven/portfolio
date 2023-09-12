@@ -23,6 +23,7 @@ body {
 header {
     background-color: black;
     text-align: left; /* Align header text to the left */
+    padding-top: 7px;
 }
 
 nav ul {
@@ -101,18 +102,40 @@ nav ul li a:hover {
     transform: scale(1.05); /* Adjust the scale factor as desired on hover */
 }
 
+
+.images img:hover {
+   transform: scale(1.07); /* Adjust the scale factor as desired on hover */
+
+}
+
 .image-container {
     text-align: center;
     max-width: 100%;
     margin-bottom: 20px; /* Add spacing between images and their descriptions */
-}
-.images img:hover {
-    transform: scale(1.1); /* Enlarge the image on hover */
+    position: relative; /* Position the container relatively */
+    padding: 10px; /* Add padding to create space around the image */
 }
 
-.image-description h3 {
+/* Add margin-top to image descriptions */
+.image-description {
+    text-align: center; /* Center align the description text */
     max-width: 100%; /* Full width for image descriptions */
+    position: absolute; /* Position the description absolutely within the container */
+    bottom: 10px; /* Adjust the margin-top value as needed */
+    left: 0; /* Align the description to the left */
+    right: 0; /* Align the description to the right */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background */
+    color: white; /* Text color for the description */
+    padding: 10px; /* Add padding to the description */
+    transition: opacity 0.2s ease; /* Add a fade-in effect to the description */
+    opacity: 0; /* Initially hide the description */
 }
+
+/* Adjust the margin-top value as needed */
+.image-container:hover .image-description {
+    opacity: 1; /* Show the description on hover */
+}
+
 
 h1 {
     font-size: 40px;
